@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+section, footer {
+  background-color: rgb(245, 245, 245);
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    padding: 50px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.purple {
+  color: rgb(148, 36, 209);
+}
+
+.click-scale:hover {
+  transform: scale(1.1);
+}
+
+.click-scale:active {
+  transform: scale(0.8);
+}
+
+/* 
+
+NAVIGATION
+
+*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 20px;
+}
+
+#personal-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link--anchor {
+  text-decoration: none;
+  font-size: 16px;
+  color: #242424;
+  font-weight: 700;
+}
+
+.fa-circle-half-stroke {
+  font-size: 20px;
+}
+
+/* 
+
+LANDING PAGE
+
+*/
+
+#landing-page {
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.title {
+  font-size: 120px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.header__para {
+  font-size: 24px;
+  line-height: 2;
+  width: 100%;
+  max-width: 450px;
+}
+
+.social__list {
+  margin-top: 16px;
+  display: flex;
+}
+
+.social__link {
+  background-color: rgb(148, 36, 209);
+  color: white;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+}
+
+.mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border: none;
+    border-radius: 9999px;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll__icon {
+    width: 20px;
+    height: 30px;
+    border: 2px solid #242424;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll__icon:after {
+    content: "";
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+    background: #242424;
+    animation: scrolling 1000ms infinite alternate-reverse;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+/* 
+
+PROJECTS
+
+*/
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.project__wrapper {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px 0 rgb(0,0,0,0.45);
+    overflow: hidden;
+}
+
+.project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__wrapper:hover .project__wrapper--background {
+    opacity: 0.7;
+}
+
+.project__wrapper--background {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: all 450ms ease;
+}
+
+.project__img {
+    width: 100%;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 64px;
+    transform: translateY(100%);
+    opacity: 0;
+    color: white;
+    max-width: 550px;
+    width: 100%;
+    padding: 0 8px;
+    transition: opacity, transform 450ms ease;
+}
+
+.project__description * {
+    margin: 12px 0;
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--link {
+    color: white;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+/* 
+
+FOOTER
+
+*/
+
+#footer__personal-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.footer__social--link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+  }
